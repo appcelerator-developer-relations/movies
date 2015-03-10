@@ -2,7 +2,7 @@
 
 [![Appcelerator Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://appcelerator.com/titanium/)
 
-Movies is an internal app we built to demonstrate how with Appcelerator you can use JavaScript to deliver beautiful, high-performance native apps entirely indistinguishable from those built in Java or Objective-C (or Swift). This application leverages a 3rd party data source to create a dynamic 
+Movies is an internal app we built to demonstrate how with Appcelerator you can use JavaScript to deliver beautiful, high-performance native apps entirely indistinguishable from those built in Java or Objective-C (or Swift). 
 
 ## Quick Start
 
