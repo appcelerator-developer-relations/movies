@@ -11,7 +11,7 @@
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>false</analytics>
-    <guid>00000000-0000-0000-0000-000000000000</guid>
+    <guid>11111111-1111-1111-1111-111111111111</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
         <plist>
