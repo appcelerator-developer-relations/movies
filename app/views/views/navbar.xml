@@ -1,0 +1,9 @@
+<Alloy>
+	<View id="container" zIndex="400">
+		<View id="background_view" />
+		<View id="content">
+			<Button id="back_button" platform="ios" />
+			<Label id="title_label"></Label>
+		</View>
+	</View>
+</Alloy>

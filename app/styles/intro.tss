@@ -1,0 +1,29 @@
+"#window[platform=android]": {
+	exitOnClose: false
+}
+
+"#clapper_top_container": {
+	top: Alloy.Globals.layout.intro.clapperTopContainerTop,
+	left: Alloy.Globals.layout.intro.clapperTopContainerLeft,
+	height: 62,
+	width: 200
+}
+
+"#clapper_top": {
+	top: 0,
+	left: 100,
+	width: 100,
+	height: 31
+}
+
+"#clapper_bottom": {
+	top: Alloy.Globals.layout.intro.clapperBottomTop,
+	left: Alloy.Globals.layout.intro.clapperBottomLeft,
+	width: 100,
+	height: 55
+}
+
+"#activity_indicator": {
+	top: Alloy.Globals.layout.intro.activityViewTop,
+	style: Ti.UI.ActivityIndicatorStyle.BIG
+}

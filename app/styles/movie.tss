@@ -1,0 +1,141 @@
+
+"#window": {
+	navBarHidden: true,
+	backgroundColor: 'black',
+	orientationModes: [Ti.UI.PORTRAIT],
+	clipMode: true
+}
+
+"#background_imageview": {
+	top: 0,
+	left: Alloy.Globals.layout.movie.backdropImageLeft,
+	width: Alloy.Globals.layout.movie.backdropImageWidth,
+	height: Alloy.Globals.layout.movie.backdropImageHeight,
+	preventDefaultImage: true,
+	opacity: 0
+}
+
+"#background_gradient_view": {
+	top: 0,
+	left: Alloy.Globals.layout.movie.backdropImageLeft,
+	width: Alloy.Globals.layout.movie.backdropImageWidth,
+	height: Alloy.Globals.layout.movie.backdropImageHeight,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#77000000', offset: 0 },
+        		  { color: '#77000000', offset: 0.5 },
+        		  { color: '#ff000000', offset: 0.9 } ],
+    }
+}
+
+"#details_scrollview": {
+	top: 0,
+	left: 0,
+	width: Alloy.Globals.Device.width,
+	height: Ti.UI.FILL,
+	contentWidth: 'auto',
+	contentHeight: 'auto',
+	layout: 'vertical',
+	opacity: 0
+}
+
+"#details_view": {
+	top: Alloy.Globals.layout.movie.detailsTop,
+	left: 10,
+	right: 10,
+	height: Ti.UI.SIZE
+}
+
+"#poster": {
+	top: 0,
+	left: 0,
+	width: Alloy.Globals.layout.movie.posterWidth,
+	height: Alloy.Globals.layout.movie.posterHeight,
+}
+
+"#poster_imageview": {
+	borderColor: '#66ffffff',
+	borderWidth: 0.5,
+	width: Alloy.Globals.layout.movie.posterWidth,
+	height: Alloy.Globals.layout.movie.posterHeight,
+	preventDefaultImage: true
+}
+
+"#play_button": {
+	width: Alloy.Globals.layout.movie.posterWidth,
+	height: Alloy.Globals.layout.movie.posterHeight,
+	backgroundImage: '/play_button.png',
+	backgroundSelectedImage: '/play_button_down.png'
+}
+
+"#poster_overlay_view": {
+	backgroundColor: '#ffffff',
+	opacity: 0
+}
+
+"#title_label": {
+	top: Alloy.Globals.layout.movie.titleTop,
+	left: 10,
+	right: 10,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 28,
+    	fontFamily: 'HelveticaNeue-Bold'
+	},
+	color: '#ffffff'
+}
+"#title_label[platform=android]": {
+	font: {
+		fontFamily: 'sans-serif',
+		fontWeight: 'bold'
+	}
+}
+
+"#info_label": {
+	top: 0,
+	left: Alloy.Globals.layout.movie.infoLeft,
+	width: 170,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 14,
+    	fontFamily: 'HelveticaNeue-Light'
+	},
+	color: '#c0c0c0'
+}
+
+".link_button": {
+	top: Alloy.Globals.layout.movie.linkButtonTop,
+	width: Alloy.Globals.layout.movie.linkButtonWidth,
+	height: 30,
+	backgroundColor: '#260205',
+	borderColor: '#b0332a',
+	borderWidth: 0.5,
+	color: '#b0332a',
+	font: {
+		fontSize: 14,
+    	fontFamily: 'HelveticaNeue-Light'
+	}
+}
+
+"#website_button": {
+	left: Alloy.Globals.layout.movie.infoLeft
+}
+
+"#imdb_button": {
+	left: Alloy.Globals.layout.movie.imdbButtonLeft
+}
+
+"#synopsis_label": {
+	top: Alloy.Globals.layout.movie.synopsisTop,
+	left: 10,
+	right: 10,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 14,
+    	fontFamily: 'HelveticaNeue'
+	},
+	backgroundColor: 'transparent',
+	color: '#d0d0d0'
+}

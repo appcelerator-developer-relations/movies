@@ -1,0 +1,11 @@
+<Alloy>
+	<View class="container">
+		<View class="about">
+			<ImageView class="logo_imageview" />
+			<Label class="title_label">Movies</Label>
+			<Label class="subtitle_label">Appcelerator</Label>
+			<Label class="licences_label">Data from The Movie Database\n\nClapperboard by Fabio Grande from The Noun Project</Label>
+			<ImageView class="appcelerator_logo_imageview" />
+		</View>
+	</View>
+</Alloy>

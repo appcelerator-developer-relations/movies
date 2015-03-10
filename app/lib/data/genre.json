@@ -1,0 +1,142 @@
+{
+    "title": "Action",
+    "movies": [
+        {
+            "title": "Jupiter Ascending",
+            "backdrop_path": "/oYZtd7Md78HuzBvT5dlJlHWc89O.jpg",
+            "tagline": "Expand your universe.",
+            "poster_path": "/9D1A46Tkf44r6REj1mXZhHtUQXt.jpg",
+            "id": "54d8d176b1e3a309942482f2",
+            "mdbid": 76757
+        },
+        {
+            "title": "Big Hero 6",
+            "backdrop_path": "/vSb2LRv4y1OykXvSiOAmnpIMSHx.jpg",
+            "tagline": "",
+            "poster_path": "/9GzPr5fv11vweNg2aq864JJQ51.jpg",
+            "id": "54632fb86bba3ed07d00d855",
+            "mdbid": 177572
+        },
+        {
+            "title": "Fury",
+            "backdrop_path": "/pKawqrtCBMmxarft7o1LbEynys7.jpg",
+            "tagline": "War never ends quietly.",
+            "poster_path": "/fIHF63oznk2PXlYM6pPfhnOB3SD.jpg",
+            "id": "54632fb86bba3ed07d00d853",
+            "mdbid": 228150
+        },
+        {
+            "title": "Taken 3",
+            "backdrop_path": "/tSqrJxQ6UHQHdcbQokdCtAmv9Vx.jpg",
+            "tagline": "It Ends Here",
+            "poster_path": "/lTbbt8otsYLKRDvELMRn83wdNoW.jpg",
+            "id": "54d8d176a88c82097823c1d2",
+            "mdbid": 260346
+        },
+        {
+            "title": "John Wick",
+            "backdrop_path": "/mFb0ygcue4ITixDkdr7wm1Tdarx.jpg",
+            "tagline": "Don't set him off.",
+            "poster_path": "/sq2MmFv9sanl9PFMfbdaBLveSJ8.jpg",
+            "id": "54632fb8d3a37bd24200da3d",
+            "mdbid": 245891
+        },
+        {
+            "title": "Lucy",
+            "backdrop_path": "/uD5jAPoIrditaG83dKbsRmG83vH.jpg",
+            "tagline": "",
+            "poster_path": "/rwn876MeqienhOVSSjtUPnwxn0Z.jpg",
+            "id": "53eb701d88971f1a1c0051d6",
+            "mdbid": 240832
+        },
+        {
+            "title": "Kingsman: The Secret Service",
+            "backdrop_path": "/uRHdkM871YJQDl3ux3ulCQw7BfV.jpg",
+            "tagline": "PUT THE KING, BACK IN KINGSMAN!",
+            "poster_path": "/pXN5zQHdqmvpUZDPkLooGD6PnAW.jpg",
+            "id": "54d8d1768fc909099681ef76",
+            "mdbid": 207703
+        },
+        {
+            "title": "The Interview",
+            "backdrop_path": "/p5n7VTC6qmFIuBFjACWURYCAlKP.jpg",
+            "tagline": "Their Trip To North Korea Just Went South.",
+            "poster_path": "/2uWb0aSm5cFmRCHP95OdA6hvTEs.jpg",
+            "id": "54d8d176a88c82097823c1e0",
+            "mdbid": 228967
+        },
+        {
+            "title": "X-Men: Days of Future Past",
+            "backdrop_path": "/aBkkrhQS4rO3u1OTahywtSXu3It.jpg",
+            "tagline": "To save the future, they must alter the past",
+            "poster_path": "/qKkFk9HELmABpcPoc1HHZGIxQ5a.jpg",
+            "id": "53eb701de54fd108260125fd",
+            "mdbid": 127585
+        },
+        {
+            "title": "Captain America: The Winter Soldier",
+            "backdrop_path": "/hXpWqy7E0Lq6sn79i1j0JRZif9c.jpg",
+            "tagline": "In heroes we trust.",
+            "poster_path": "/pH4oeiZAh9a40tly4D0l6aAB3ms.jpg",
+            "id": "53eb701d88971f1a1c0051d4",
+            "mdbid": 100402
+        },
+        {
+            "title": "Teenage Mutant Ninja Turtles",
+            "backdrop_path": "/dkbX258MMMSG4oeKWLjQyVeGcUz.jpg",
+            "tagline": "Turtle Power Returns 2014",
+            "poster_path": "/njH0vF9FyTGluny7FklPlkAZ6ex.jpg",
+            "id": "53eb701ae54fd108260125ec",
+            "mdbid": 98566
+        },
+        {
+            "title": "The Matrix Reloaded",
+            "backdrop_path": "/Fp3piEuHXxKnPBO5R0Wj4wjZHg.jpg",
+            "tagline": "Free your mind.",
+            "poster_path": "/ezIurBz2fdUc68d98Fp9dRf5ihv.jpg",
+            "id": "54da14268fc90956e08e240d",
+            "mdbid": 604
+        },
+        {
+            "title": "Alien Outpost",
+            "backdrop_path": "/fCPqyqCppo0MruBqGXpz5pmUabU.jpg",
+            "tagline": "Mankind's Last Stand",
+            "poster_path": "/5B182VoY6ZJh0a6kbp9k9UPvl2D.jpg",
+            "id": "54e179ae8fc90956e0c97af1",
+            "mdbid": 312526
+        },
+        {
+            "title": "American Sniper",
+            "backdrop_path": "/7BhTIyySTmmqNaoguSPjZAVMoQG.jpg",
+            "tagline": "The most lethal sniper in U.S. history.",
+            "poster_path": "/ooy5M7QXEWVpOTAZIRGMskBQbQ9.jpg",
+            "id": "54d8d18cb1e3a3099c24fd10",
+            "mdbid": 190859
+        },
+        {
+            "title": "The Hobbit: An Unexpected Journey",
+            "backdrop_path": "/jjAq3tCezdlQduusgtMhpY2XzW0.jpg",
+            "tagline": "From the smallest beginnings come the greatest legends.",
+            "poster_path": "/h1XjBJoWdOh8aegBoVYKgABQZSL.jpg",
+            "id": "54da1427b1e3a3099c2efe55",
+            "mdbid": 49051
+        },
+        {
+            "title": "Transformers: Age of Extinction",
+            "backdrop_path": "/yTr6tj2FQIKuhGnEQ2h7gXwBLB4.jpg",
+            "tagline": "This is not war. It's extinction.",
+            "poster_path": "/6rtXH8cIZbgwLy8EvaXGucwdep5.jpg",
+            "id": "53ee2520587d110822002006",
+            "mdbid": 91314
+        },
+        {
+            "title": "Hercules",
+            "backdrop_path": "/5CdgKsD4Rg87XIXmQSSomod5VCH.jpg",
+            "tagline": "",
+            "poster_path": "/d3gL1VX7FwhJ5iNAax2tEcchfN0.jpg",
+            "id": "53eb701a88971feb6500c302",
+            "mdbid": 184315
+        }
+    ],
+    "id": "54e2cb2c8fc9090996d2de7d"
+}

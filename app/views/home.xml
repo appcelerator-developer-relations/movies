@@ -1,0 +1,16 @@
+<Alloy>
+	<Window id="window" title="Movies">
+		<View id="container">
+			<TextField id="search_textfield" />    		
+			<ImageView id="search_icon" />
+	    	<ScrollView id="lists_container" zIndex="100">
+				<Require src="views/list_static_cell" id="searchCell" />
+				<Require src="views/list_static_cell" id="aboutCell" />
+				<Require src="views/list_static_cell" id="settingsCell" platform="ios" />
+	    	</ScrollView>
+	    	<View id="search_overlay" zIndex="0" />
+	    	<ActivityIndicator id="activity_indicator" />
+		</View>
+		<Require src="views/navbar" id="navbar" platform="ios" />
+	</Window>
+</Alloy>

@@ -1,0 +1,142 @@
+{
+    "title": "Now Playing",
+    "movies": [
+        {
+            "title": "Jupiter Ascending",
+            "backdrop_path": "/oYZtd7Md78HuzBvT5dlJlHWc89O.jpg",
+            "tagline": "Expand your universe.",
+            "poster_path": "/9D1A46Tkf44r6REj1mXZhHtUQXt.jpg",
+            "id": "54d8d1768fc909099681ef71",
+            "mdbid": 76757
+        },
+        {
+            "title": "Fifty Shades of Grey",
+            "backdrop_path": "/nnY2XnO3zjpkdq7xxOZPyI1r6V0.jpg",
+            "tagline": "Mr. Grey will see you now",
+            "poster_path": "/iRAYKRj2KN0vuXGiCVsl4qPgxlZ.jpg",
+            "id": "54d8d176b1e3a309942482f3",
+            "mdbid": 216015
+        },
+        {
+            "title": "Taken 3",
+            "backdrop_path": "/tSqrJxQ6UHQHdcbQokdCtAmv9Vx.jpg",
+            "tagline": "It Ends Here",
+            "poster_path": "/lTbbt8otsYLKRDvELMRn83wdNoW.jpg",
+            "id": "54d8d176a88c82097823c1d2",
+            "mdbid": 260346
+        },
+        {
+            "title": "Wild Card",
+            "backdrop_path": "/pbZtww8VsNDSwt9eMnG0faELwYV.jpg",
+            "tagline": "It's a card… and it's wild. Now watch the movie.",
+            "poster_path": "/s5qUhHvFAZZ7Q4r5Dn3GdsfaPKI.jpg",
+            "id": "54d8d176a88c820980253916",
+            "mdbid": 265208
+        },
+        {
+            "title": "Kingsman: The Secret Service",
+            "backdrop_path": "/uRHdkM871YJQDl3ux3ulCQw7BfV.jpg",
+            "tagline": "PUT THE KING, BACK IN KINGSMAN!",
+            "poster_path": "/pXN5zQHdqmvpUZDPkLooGD6PnAW.jpg",
+            "id": "54d8d1768fc909099681ef76",
+            "mdbid": 207703
+        },
+        {
+            "title": "Jurassic City",
+            "backdrop_path": "/34b7Ns04XXLrPN1Pc7ojtao7AL2.jpg",
+            "tagline": "Throwing L.A. Back to the Stone Ages",
+            "poster_path": "/lZYWloiaiYTp99OaLXr9u2HnOya.jpg",
+            "id": "54d8d176b1e3a309942482f0",
+            "mdbid": 315024
+        },
+        {
+            "title": "Blackhat",
+            "backdrop_path": "/biw5Nn85iBZZd8GWYO9XXH56VK2.jpg",
+            "tagline": "We are no longer in control.",
+            "poster_path": "/tn07zjNNIJuOsecqTC2JEYA49uU.jpg",
+            "id": "54d8d176a88c820980253912",
+            "mdbid": 201088
+        },
+        {
+            "title": "LEGO DC Comics Super Heroes: Justice League vs. Bizarro League",
+            "backdrop_path": "/js0v1LOGsHACnNqSO3E9RB6gwZG.jpg",
+            "tagline": "",
+            "poster_path": "/bdZFoEa6NY7yNUsfznhIAwThlkD.jpg",
+            "id": "54d8d1768fc909099681ef73",
+            "mdbid": 322456
+        },
+        {
+            "title": "Seventh Son",
+            "backdrop_path": "/scVPsqO1MryjgbJuGg2JsWTE3WD.jpg",
+            "tagline": "When darkness falls, the son will rise. When the son falls, the dark knight will rise.",
+            "poster_path": "/saJi9Vs37zLmUENyIEdhgURk3a1.jpg",
+            "id": "54d8d176b1e3a309942482ef",
+            "mdbid": 68737
+        },
+        {
+            "title": "The Boy Next Door",
+            "backdrop_path": "/Aq0EuKR46NNXw6c8WJV9bYljzCD.jpg",
+            "tagline": "",
+            "poster_path": "/9scuwyaJBqxMmapuyts4s2zt9sP.jpg",
+            "id": "54d8d176a88c82097823c1de",
+            "mdbid": 241251
+        },
+        {
+            "title": "The SpongeBob Movie: Sponge Out of Water",
+            "backdrop_path": "/1WNayre36yQ2ZBNXzXksQotoK25.jpg",
+            "tagline": "He's leaving his world behind, to redeem himself of these past 10 years",
+            "poster_path": "/sZGlB5G7FjGiGwVUusluSb9DdKd.jpg",
+            "id": "54d8d1768fc909099681ef72",
+            "mdbid": 228165
+        },
+        {
+            "title": "Little Red Riding Hood",
+            "backdrop_path": "/j0cBcUtenrbhX0acGZLxYWDbScx.jpg",
+            "tagline": "",
+            "poster_path": "/6kyp41tfCegaYe9xlwNhNuw5Bxr.jpg",
+            "id": "54e027b0b1e3a3099c600ce0",
+            "mdbid": 324787
+        },
+        {
+            "title": "Vice",
+            "backdrop_path": "/tGyXLY1jzK29z9blMzy0yc3qTG8.jpg",
+            "tagline": "Where the future is your past.",
+            "poster_path": "/nGULYz1iLVAeS9dQkZZ2oNTt4s3.jpg",
+            "id": "54d8d176a88c82097823c1df",
+            "mdbid": 307663
+        },
+        {
+            "title": "The Last 5 Years",
+            "backdrop_path": "/n15fRSfknCGKc7ouxhIT8W7OlFZ.jpg",
+            "tagline": "THERE ARE TWO SIDES TO EVERY LOVE STORY.",
+            "poster_path": "/5ZVsMEDswVsJB4MviX9Yp43Nw4I.jpg",
+            "id": "54d8d177a88c820980253918",
+            "mdbid": 206296
+        },
+        {
+            "title": "Mortdecai",
+            "backdrop_path": "/3ReehmXMwnhwqdvjzECb72Xw27W.jpg",
+            "tagline": "",
+            "poster_path": "/chgpheyKaJzOVN6u3n2tJupO4aC.jpg",
+            "id": "54d8d1768fc90956e0842bb9",
+            "mdbid": 210860
+        },
+        {
+            "title": "Dyakon Levski",
+            "backdrop_path": "/lYJedpGH3p4oWyVabsekwkULNvz.jpg",
+            "tagline": "",
+            "poster_path": "/AmkLAKsETY0ZDTNGfXgybOmMGXF.jpg",
+            "id": "54e02830a88c8209785e3876",
+            "mdbid": 319633
+        },
+        {
+            "title": "Justice League: Throne of Atlantis",
+            "backdrop_path": "/yIAxebMW8bvGJhZO8Q3TSi4zMDQ.jpg",
+            "tagline": "",
+            "poster_path": "/3n0zmm2dPF0TQt2ikJ2tUjKr2FT.jpg",
+            "id": "54d8d176b1e3a3099c24fcad",
+            "mdbid": 297556
+        }
+    ],
+    "id": "54da1dd4a88c8209802f25a8"
+}

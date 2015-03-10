@@ -1,0 +1,75 @@
+"#cell": {
+	top: 10,
+	left: 10,
+	// right: 5,
+	width: Alloy.Globals.layout.lists.cell.width,
+	height: Alloy.Globals.layout.lists.cell.height,
+	backgroundColor: '#333333',
+	clipMode: true
+}
+
+"#image": {
+	top: Alloy.Globals.layout.lists.cell.imageTop,
+	left: Alloy.Globals.layout.lists.cell.imageLeft,
+	width: Alloy.Globals.layout.lists.cell.imageWidth,
+	height: Alloy.Globals.layout.lists.cell.imageHeight,
+	touchEnabled: false
+}
+
+".imageview": {
+	width: Alloy.Globals.layout.lists.cell.imageWidth,
+	height: Alloy.Globals.layout.lists.cell.imageHeight,
+	preventDefaultImage: true,
+	touchEnabled: false
+}
+
+"#imageview": {
+	zIndex: 0
+}
+
+"#imageview1": {
+	zIndex: 1,
+	opacity: 0
+}
+
+".gradient_view": {
+	top: 0,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#33000000', offset: 0 },
+        		  { color: '#aa000000', offset: 1 } ]
+   },
+   touchEnabled: false
+}
+
+"#title_label": {
+	left: 4,
+	right: 4,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	font: {
+		fontSize: 22,
+		fontFamily: 'HelveticaNeue-Bold'
+	},
+	textAlign: 'center',
+	color: '#ffffff',
+	touchEnabled: false
+}
+"#title_label[platform=android]": {
+	font: {
+		fontFamily: 'sans-serif',
+		fontWeight: 'bold'
+	},
+	ellipsize: true
+}
+
+"#overlay_view": {
+	backgroundColor: '#ffffff',
+	opacity: 0,
+	touchEnabled: false
+}

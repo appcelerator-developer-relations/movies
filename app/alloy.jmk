@@ -1,0 +1,39 @@
+/**
+ * Movies
+ * 
+ * @copyright
+ * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
+ *
+ * @license
+ * Licensed under the terms of the Apache Public License
+ * Please see the LICENSE included with this distribution for details.
+ */
+
+/**
+ * pre compile callback
+ * 
+ * - removes tests directory from production builds and when config.run_logic_tests is false
+ */
+task("pre:compile", function(event, logger) {
+	
+	var env = event.alloyConfig.deploytype;
+	logger.info("Pre compile (" + env + ")");
+	
+	var fs = require("fs");
+	var config = JSON.parse(fs.readFileSync(event.dir.config + ".json", "utf8"));
+	
+	logger.info(JSON.stringify(config["env:" + env]));
+	
+	if ("production" === env
+		|| !config["env:" + env].run_logic_tests) {
+			
+	    logger.info("*** Excluding tests from build");
+	    var path = (event.alloyConfig.platform == 'android') ? 'android' : 'iphone';
+	    var tests_dir = event.dir.resources + "/" + path + "/tests";
+    	var wrench = require("wrench");
+    	wrench.rmdirSyncRecursive(tests_dir);
+    	
+   } else {
+   		logger.info("*** Including tests in build");
+   }
+});

@@ -1,0 +1,68 @@
+{
+    "runtime": 125,
+    "status": "Released",
+    "backdrop_path": "/oYZtd7Md78HuzBvT5dlJlHWc89O.jpg",
+    "overview": "In a universe where human genetic material is the most precious commodity, an impoverished young Earth woman becomes the key to strategic maneuvers and internal strife within a powerful dynasty.",
+    "title": "Jupiter Ascending",
+    "user_id": "53da46c1485fc30823004750",
+    "tagline": "Expand your universe.",
+    "updated_at": "2015-02-09T15:29:07+0000",
+    "vote_count": 61,
+    "original_title": "Jupiter Ascending",
+    "original_language": "en",
+    "poster_path": "/9D1A46Tkf44r6REj1mXZhHtUQXt.jpg",
+    "production_countries": [
+        {
+            "name": "United States of America",
+            "iso_3166_1": "US"
+        }
+    ],
+    "revenue": 0,
+    "homepage": "http://www.jupiterascending.com/",
+    "video": false,
+    "imdb_id": "tt1617661",
+    "trailer": {
+        "source": "DwUor5S2Z30",
+        "name": "Official Trailer 1",
+        "size": "HD",
+        "type": "Trailer"
+    },
+    "id": "54d8d1768fc909099681ef71",
+    "release_date": "2015-02-06",
+    "budget": 0,
+    "mdbid": 76757,
+    "popularity": 29.6465324994119,
+    "genres": [
+        {
+            "name": "Action",
+            "mdbid": 28
+        },
+        {
+            "name": "Adventure",
+            "mdbid": 12
+        },
+        {
+            "name": "Fantasy",
+            "mdbid": 14
+        }
+    ],
+    "created_at": "2015-02-09T15:25:42+0000",
+    "production_companies": [
+        {
+            "name": "Warner Bros.",
+            "mdbid": 6194
+        },
+        {
+            "name": "Village Roadshow Pictures",
+            "mdbid": 79
+        }
+    ],
+    "adult": false,
+    "spoken_languages": [
+        {
+            "name": "English",
+            "iso_639_1": "en"
+        }
+    ],
+    "vote_average": 6.8
+}

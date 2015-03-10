@@ -1,0 +1,22 @@
+<Alloy>
+	<Window id="window" class="container">
+		<ImageView id="background_imageview" />
+		<View id="background_gradient_view" />
+		<ScrollView id="details_scrollview">
+			<Label id="title_label" />
+			<View id="details_view">
+				<View id="poster">
+					<ImageView id="poster_imageview" />
+					<View id="poster_overlay_view" />
+					<Button id="play_button" />
+				</View>
+				<Label id="info_label" />
+				<Button id="website_button" class="link_button">Website</Button>
+				<Button id="imdb_button" class="link_button">IMDB</Button>
+			</View>
+			<Label id="synopsis_label" />
+		</ScrollView>
+		<ActivityIndicator id="activity_indicator" />
+		<Require src="views/navbar" />
+	</Window>
+</Alloy>

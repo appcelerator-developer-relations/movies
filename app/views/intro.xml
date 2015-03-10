@@ -1,0 +1,9 @@
+<Alloy>
+	<Window id="window">
+		<View id="clapper_top_container">
+			<ImageView id="clapper_top" image="/clapper_top.png" />
+		</View>
+		<ImageView id="clapper_bottom" image="/clapper_bottom.png" />
+		<ActivityIndicator id="activity_indicator" />
+	</Window>
+</Alloy>

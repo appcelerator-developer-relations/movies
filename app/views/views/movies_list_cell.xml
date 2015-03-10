@@ -1,0 +1,11 @@
+<Alloy>
+	<TableViewRow id="container">
+		<ScrollView id="scrollview">
+			<ImageView id="thumbnail_imageview" />
+		</ScrollView>
+		<View id="gradient_view" />
+		<Label id="title_label" text="A Title" />
+		<View id="overlay_view" />
+		<View id="separator" />
+	</TableViewRow>
+</Alloy>

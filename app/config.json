@@ -1,0 +1,13 @@
+{
+    "global": {},
+    "env:development": {
+    	"run_logic_tests" : true
+    },
+    "env:test": {},
+    "env:production": {},
+    "os:android": {},
+    "os:blackberry": {},
+    "os:ios": {},
+    "os:mobileweb": {},
+    "dependencies": {}
+}

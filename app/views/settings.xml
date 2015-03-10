@@ -1,0 +1,14 @@
+<Alloy>
+	<View class="container">
+		<View class="settings_container">
+			<View class="setting_container">
+				<Label class="setting_label">Device motion animation</Label>
+				<Switch id="motion_switch" class="setting_switch" />
+			</View>
+			<View class="setting_container">
+				<Label class="setting_label">Parallax animation</Label>
+				<Switch id="list_animation_switch" class="setting_switch" />
+			</View>
+		</View>
+	</View>
+</Alloy>

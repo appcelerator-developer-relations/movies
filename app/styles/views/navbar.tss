@@ -1,0 +1,56 @@
+"#container": {
+	top: 0,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: 64
+}
+
+"#background_view": {
+	top: 0,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#99000000', offset: 0 }, 
+        		  { color: '#33000000', offset: 0.5},
+        		  { color: '#00000000', offset: 1.0} ]
+    }
+}
+
+"#back_button": {
+	top: 20,
+	left: 10,
+	width: 100,
+	height: 44,
+	font: {
+		fontSize: 14,
+		fontWeight: 'bold'
+	},
+	backgroundColor: 'transparent',
+	color: '#ffffff',
+	image: '/back_button.png',
+	tintColor: '#ffffff'
+}
+
+"#title_label": {
+	top: 20,
+	height: 44,
+	font: {
+		fontSize: 18,
+		fontFamily: 'HelveticaNeue-Bold'
+	},
+	viewShadowRadius: 5,
+	color: '#ffffff',
+	width: Ti.UI.SIZE
+}
+"#title_label[platform=android]": {
+	top: 15,
+	font: {
+		fontSize: 24,
+		fontFamily: 'sans-serif',
+		fontWeight: 'bold'
+	}
+}

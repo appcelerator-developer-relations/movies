@@ -1,0 +1,102 @@
+"#window": {
+	backgroundColor:"black",
+	extendEdges: Titanium.UI.EXTEND_EDGE_TOP,
+	navBarHidden: true,
+	orientationModes: [Ti.UI.PORTRAIT]
+}
+"#window[platform=android]": {
+	exitOnClose: true
+}
+
+"#container": {
+	top: -70,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+}
+
+"#lists_container": {
+	top: 70,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	contentWidth: 'auto', 
+	contentHeight: 'auto',
+	scrollType: 'vertical',
+	opacity: 0
+}
+
+"#search_textfield": {
+	top: 10,
+	left: 10,
+	right: 10,
+	height: 40,
+	paddingLeft: 40,
+	paddingRight: 10,
+	color: '#ffffff',
+	autocapitalization: true,
+	autocorrect: false,
+	returnKeyType: Titanium.UI.RETURNKEY_SEARCH,
+	enableReturnKey: true,
+	hintText: 'Search',
+	borderColor: '#b0332a',
+	borderWidth: 1,
+	backgroundColor: '#260205',
+}
+"#search_textfield[platform=ios]": {
+	top: 30,
+	appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
+	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS
+}
+
+"#search_icon": {
+	top: 40,
+	left: 20,
+	width: 20,
+	height: 20,
+	image: '/search_icon.png'
+}
+
+"#search_overlay": {
+	top: 70,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundColor: '#99000000'
+}
+
+"#aboutCell": {
+	
+}
+
+"#options_view": {
+	bottom: 0,
+	height: 50,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#00000000', offset: 0 }, 
+        		  { color: '#ff000000', offset: 1.0} ]
+    }
+}
+
+"#toggle_about_button": {
+	left: 0,
+	bottom: 0,
+	width: Alloy.Globals.layout.optionButtons.width,
+	height: Alloy.Globals.layout.optionButtons.height,
+	backgroundColor: 'transparent',
+	image: '/about_button.png',
+	tintColor: '#b0332a'
+}
+
+"#toggle_settings_button": {
+	right: 0,
+	bottom: 0,
+	width: Alloy.Globals.layout.optionButtons.width,
+	height: Alloy.Globals.layout.optionButtons.height,
+	backgroundColor: 'transparent',
+	image: '/settings_button.png',
+	tintColor: '#b0332a'
+}

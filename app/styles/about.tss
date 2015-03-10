@@ -1,0 +1,59 @@
+
+".container": {
+	backgroundColor: '#66000000',
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	opacity: 0
+}
+
+".about": {
+	layout: 'vertical',
+	width: Alloy.Globals.layout.overlay.width,
+	height: Ti.UI.SIZE
+}
+
+".logo_imageview": {
+	width: 100,
+	height: 100,
+	image: '/logo.png'
+}
+
+".title_label": {
+	top: 20,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 20,
+    	fontFamily: 'HelveticaNeue-Light'
+	},
+	color: '#ffffff'
+}
+
+".subtitle_label": {
+	top: 10,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 14,
+    	fontFamily: 'HelveticaNeue-Light'
+	},
+	color: '#bbffffff'
+}
+
+".licences_label": {
+	top: 40,
+	left: 20,
+	right: 20,
+	height: Ti.UI.SIZE,
+	font: {
+		fontSize: 14,
+    	fontFamily: 'HelveticaNeue-Light'
+	},
+	color: '#99ffffff',
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
+}
+
+".appcelerator_logo_imageview": {
+	top: 40,
+	width: 50,
+	height: 38,
+	image: '/appcelerator_logo.png'
+}

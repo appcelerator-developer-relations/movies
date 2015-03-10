@@ -1,0 +1,11 @@
+<Alloy>
+	<View id="cell">
+		<View id="image">
+			<ImageView id="imageview" class="imageview" />
+			<ImageView id="imageview1" class="imageview" />
+		</View>
+		<View class="gradient_view" />
+		<Label id="title_label" />
+		<View id="overlay_view" />
+	</View>
+</Alloy>

@@ -1,0 +1,14 @@
+<Alloy>
+	<Window id="window" title="Now Playing">
+		<TableView id="tableview">
+			<HeaderView platform="ios">
+            	<View id="tableview_header" />
+        	</HeaderView>
+        	<HeaderPullView platform="ios">
+            	<View id="pull_view" />
+        	</HeaderPullView>
+        </TableView>
+		<ActivityIndicator id="activity_indicator" />
+		<Require src="views/navbar" id="navbar" />
+	</Window>
+</Alloy>

@@ -1,0 +1,33 @@
+
+"#window": {
+	navBarHidden: true,,
+	orientationModes: [Ti.UI.PORTRAIT],
+	backgroundColor: '#000000'
+}
+
+"#pull_view": {
+	backgroundColor: '#b0332a'
+}
+
+"#tableview": {
+	top: 0,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundColor: 'transparent',
+	pullBackgroundColor: '#b0332a',
+	showVerticalScrollIndicator: false,
+	opacity: 0
+}
+"#tableview[platform=ios]": {
+	separatorInsets: {
+		left: 0,
+		right: 0
+	},
+	separatorStyle: Titanium.UI.iPhone.TableViewSeparatorStyle.NONE
+}
+
+"#tableview_header": {
+	backgroundColor: '#b0332a',
+	height: 64
+}

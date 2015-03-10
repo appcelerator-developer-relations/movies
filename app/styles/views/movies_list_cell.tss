@@ -1,0 +1,74 @@
+"#container": {
+	layout: "Absolute",
+	top: 0,
+	left: 0,
+	height: Alloy.Globals.layout.list.row.height,
+	backgroundColor: '#000000'
+}
+
+"#container[platform=ios]": {
+	selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
+}
+
+"#scrollview": {
+	contentWidth: 'auto',
+	contentHeight: 'auto',
+	scrollingEnabled: false,
+	scrollType: 'vertical'
+}
+
+"#thumbnail_imageview": {
+	top: 0,
+	bottom: 0,
+	left: 0,
+	right: 0,
+	width: Alloy.Globals.layout.list.row.width,
+	height: Alloy.Globals.layout.list.row.imageHeight,
+	preventDefaultImage: true
+}
+
+"#gradient_view": {
+	top: 0,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#00000000', offset: 0 },
+        		  { color: '#99000000', offset: 1.0} ]
+   }
+}
+
+"#title_label": {
+	bottom: 6,
+	left: 6,
+	right: 6,
+	width: Titanium.UI.SIZE,
+	// height: Titanium.UI.FILL,
+	font: {
+		fontSize: 22,
+    	fontFamily: 'HelveticaNeue-Bold'
+	},
+	color: '#ffffff'
+}
+"#title_label[platform=android]": {
+	font: {
+		fontFamily: 'sans-serif',
+		fontWeight: 'bold'
+	}
+}
+
+"#overlay_view": {
+	backgroundColor: '#ffffff',
+	opacity: 0
+}
+
+"#separator": {
+	bottom: 0,
+	left: 0,
+	right: 0,
+	height: 0.5,
+	backgroundColor: '#ffffff'
+}
