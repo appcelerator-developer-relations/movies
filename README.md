@@ -1,5 +1,7 @@
 ## Movies 
 
+**To learn more about how we built Movies, the decisions behind the code and to have your questions answered, join us on Thursday March 12 at 9am PST / 4pm GMT: [http://www.crowdcast.io/e/appceleratorcrowdcast1](http://www.crowdcast.io/e/appceleratorcrowdcast1)**
+
 [![Appcelerator Titanium](http://www-static.appcelerator.com/badges/titanium-git-badge-sq.png)](http://appcelerator.com/titanium/)
 
 Movies is an internal app we built to demonstrate how with Appcelerator you can use JavaScript to deliver beautiful, high-performance native apps entirely indistinguishable from those built in Java or Objective-C (or Swift). 
