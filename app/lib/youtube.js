@@ -142,14 +142,19 @@ function playVideo(url) {
  
 exports.close = function() {
     Ti.API.info('closing video player');
+    
     if(OS_IOS) {
-        videoPlayer.fullscreen = false;
+    	if (videoPlayer) {
+	        videoPlayer.fullscreen = false;
+	    }
         win.close();
-    }
-    else {
-        videoPlayer.hide();
-        videoPlayer.release();
-        videoPlayer = null;
+        win = null;
+    } else {
+    	if (videoPlayer) {
+	        videoPlayer.hide();
+	        videoPlayer.release();
+	        videoPlayer = null;
+	    }
     }
     exports.isPlaying = false;
 };
