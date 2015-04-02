@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="window" title="Now Playing">
+	<Window id="window">
 		<TableView id="tableview">
 			<HeaderView platform="ios">
             	<View id="tableview_header" />
