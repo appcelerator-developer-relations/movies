@@ -112,7 +112,7 @@ function Navigation(_args) {
 
         _controller.destroy();
         _controller = null;
-    },
+    };
 
 }
 

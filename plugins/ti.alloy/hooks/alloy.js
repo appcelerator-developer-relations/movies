@@ -172,9 +172,6 @@ exports.init = function (logger, config, cli, appc) {
 						process.exit(1);
 					} else {
 						logger.info(__('Alloy compiler completed successfully'));
-
-						afs.exists(path.join(cli.argv["project-dir"], 'build', 'i18n')) && process.argv.push('--i18n-dir', 'build');
-						afs.exists(path.join(cli.argv["project-dir"], 'build', 'platform')) && (cli.argv['platform-dir'] = 'build/platform');
 					}
 					finished();
 				});
