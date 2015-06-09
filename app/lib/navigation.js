@@ -113,22 +113,7 @@ function Navigation(_args) {
         _controller.destroy();
         _controller = null;
     },
-    
-    this.goHome = function() {
-        
-        if (!that.currentController) {
-            Ti.API.error('Cannot close controller');            
-            return;
-        }
-        
-        if(OS_IOS) {
-            that.currentController.navWindow.close();
-        } else {
-            that.currentController.window.close();
-        }
-        
-        that.currentController = null;
-    };
+
 }
 
 // Calling this module function returns a new navigation instance

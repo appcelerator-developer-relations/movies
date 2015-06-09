@@ -264,10 +264,10 @@ Alloy.Globals.calculateElementDimensions = function(size) {
 	layout.movie.posterHeight = layout.movie.posterWidth * 1.5; 
 	layout.movie.infoLeft = layout.movie.posterWidth + 15; 
 	layout.movie.infoWidth = size.width - layout.movie.infoLeft - 20;
-	layout.movie.linkButtonTop = layout.movie.posterTop + 40;
+	layout.movie.linkButtonTop = 40;
 	layout.movie.linkButtonWidth = (layout.movie.infoWidth - 10) / 2;
 	if (OS_ANDROID) layout.movie.linkButtonWidth -= 1;  
-	layout.movie.imdbButtonLeft =  + layout.movie.infoLeft + layout.movie.linkButtonWidth + 10; 
+	layout.movie.imdbButtonLeft = layout.movie.infoLeft + layout.movie.linkButtonWidth + 10; 
 	layout.movie.synopsisTop = 20;
 	
 	return layout;
