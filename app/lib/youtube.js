@@ -116,6 +116,12 @@ function playVideo(url) {
             backgroundColor: '#000'
         });
     }
+    if(OS_WINDOWS) {
+        win = Ti.UI.createWindow({
+            title: 'View Training Video',
+            backgroundColor: '#000'
+        });
+    }
     videoPlayer = Ti.Media.createVideoPlayer({
         backgroundColor: '#000',
         url: url,
@@ -138,6 +144,10 @@ function playVideo(url) {
         win.add(videoPlayer);
         win.open();
     }
+    if(OS_WINDOWS) {
+        win.add(videoPlayer);
+        win.open();
+    }
 }
  
 exports.close = function() {
@@ -147,6 +157,9 @@ exports.close = function() {
     	if (videoPlayer) {
 	        videoPlayer.fullscreen = false;
 	    }
+        win.close();
+        win = null;
+    } else if (OS_WINDOWS) {
         win.close();
         win = null;
     } else {

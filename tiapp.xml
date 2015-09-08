@@ -70,6 +70,7 @@
         <target device="ipad">true</target>
         <target device="iphone">true</target>
         <target device="mobileweb">false</target>
+        <target device="windows">true</target>
     </deployment-targets>
     <sdk-version>4.0.0.GA</sdk-version>
     <plugins>

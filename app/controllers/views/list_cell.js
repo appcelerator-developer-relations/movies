@@ -28,6 +28,12 @@ $.animateImages = function() {
 			duration: 1000
 		});
 	}
+	if (OS_WINDOWS) {
+		$[nextImageView].animate({
+			opacity: 1,
+			duration: 1000
+		});
+	}
 
 	_currentImageIndex = nextImageIndex;
 	_currentImageView = nextImageView;
