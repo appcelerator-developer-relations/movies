@@ -15,6 +15,10 @@
 	height: Ti.UI.FILL
 }
 
+"#container[platform=windows]": {
+	top: -15
+}
+
 "#lists_container": {
 	top: 70,
 	left: 0,
