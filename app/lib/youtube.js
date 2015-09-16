@@ -157,10 +157,10 @@ exports.close = function() {
     	if (videoPlayer) {
 	        videoPlayer.fullscreen = false;
 	    }
-        win.close();
+        win && win.close();
         win = null;
     } else if (OS_WINDOWS) {
-        win.close();
+        win && win.close();
         win = null;
     } else {
     	if (videoPlayer) {
