@@ -1,7 +1,7 @@
 {
     "global": {},
     "env:development": {
-    	"run_logic_tests" : true
+    	"run_logic_tests" : false
     },
     "env:test": {},
     "env:production": {},
