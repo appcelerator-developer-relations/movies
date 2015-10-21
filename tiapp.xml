@@ -40,7 +40,7 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest>
-            <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21"/>
+            <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22"/>
             <application android:theme="@style/Theme.NoActionBar">
                 <activity
                     android:configChanges="keyboardHidden|orientation"
