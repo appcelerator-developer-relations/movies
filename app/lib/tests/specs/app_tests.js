@@ -9,7 +9,7 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-var should = require('tests/should');
+var should = require('/tests/should');
 
 describe('Layout (iPhone 4 inch)', function() {
     

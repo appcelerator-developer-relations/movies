@@ -1,4 +1,4 @@
-var animation = require('animation');
+var animation = require('/animation');
 
 var args = arguments[0] || {};
 

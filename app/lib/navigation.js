@@ -49,7 +49,7 @@ function Navigation(_args) {
      */
     this.push = function(_controller, _controllerArguments) {
     	if (typeof _controller == "string") {
-        	var controller = Alloy.createController(_controller, _controllerArguments);
+        	var controller = Alloy.createController('/' + _controller, _controllerArguments);
        	} else {
 			var controller = _controller;
 		}
@@ -81,7 +81,7 @@ function Navigation(_args) {
     },
     
     this.openModal = function(_controller, _controllerArguments) {
-        var controller = Alloy.createController(_controller, _controllerArguments);
+        var controller = Alloy.createController('/' + _controller, _controllerArguments);
         that.currentController = controller;
         that.currentControllerArguments = _controllerArguments;
 

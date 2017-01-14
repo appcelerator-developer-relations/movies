@@ -1,4 +1,4 @@
-var animation = require('animation');
+var animation = require('/animation');
 
 exports.animateClick = function(callback) {
 	animation.flash($.overlay_view, callback);	

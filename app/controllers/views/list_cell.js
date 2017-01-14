@@ -1,5 +1,5 @@
-var alloyAnimation = require('alloy/animation'),
-	animation = require('animation');
+var alloyAnimation = require('/alloy/animation'),
+	animation = require('/animation');
 
 var _images = [];
 var _currentImageIndex = 0;

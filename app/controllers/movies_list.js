@@ -9,8 +9,8 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-var theMovieDb = require('themoviedb'),
-	Data = require("data");
+var theMovieDb = require('/themoviedb'),
+	Data = require('/data');
 
 var args = arguments[0] || {};
 
@@ -102,7 +102,7 @@ function populateMovies(movies) {
 		
 		var movie = movies[i];
 		
-		var cell = Alloy.createController("views/movies_list_cell");
+		var cell = Alloy.createController("/views/movies_list_cell");
 		cell.updateViews({
 			"#title_label": {
 				text: movie.title

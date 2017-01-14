@@ -9,10 +9,10 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-var Data = require("data"),
-	theMovieDb = require('themoviedb'),
-	yt = require('youtube'),
-	animation = require('animation');
+var Data = require("/data"),
+	theMovieDb = require('/themoviedb'),
+	yt = require('/youtube'),
+	animation = require('/animation');
 
 var IMDB_BASE_URL = 'http://www.imdb.com/title/';
 
