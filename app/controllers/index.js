@@ -34,10 +34,10 @@ function init() {
 	
 	// App.init();
 	
-	_introController = Alloy.createController('intro');
+	_introController = Alloy.createController('/intro');
 	_introController.window.open();
 	
-	_homeController = Alloy.createController('home', {
+	_homeController = Alloy.createController('/home', {
 		loaded_callback: function(){
 			_introController.endIntro(displayHome);
 	}});

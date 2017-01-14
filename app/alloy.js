@@ -51,7 +51,7 @@ Alloy.Globals.Navigator = {};
  */
 Alloy.Globals.initNavigation = function() {		
 	// Require in the navigation module
-    Alloy.Globals.Navigator = require("navigation")({
+    Alloy.Globals.Navigator = require("/navigation")({
         parent: Alloy.Globals.navigationWindow || null
     });
 };

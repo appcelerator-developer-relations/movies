@@ -9,8 +9,8 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-var Data = require("data"),
-	theMovieDb = require('themoviedb');
+var Data = require("/data"),
+	theMovieDb = require('/themoviedb');
 if (OS_IOS) {
 	var CoreMotion = require("ti.coremotion");
 }
@@ -150,7 +150,7 @@ function populateLists(lists, type, cellOffset, yOffset) {
 		var cell_x = 10 + ((Alloy.Globals.layout.lists.cell.width + 10) * (idx % 2));
 		var cell_y = yOffset + ((Alloy.Globals.layout.lists.cell.height + 10) * Math.floor(idx / 2));
 
-		var cell = Alloy.createController("views/list_cell");
+		var cell = Alloy.createController("/views/list_cell");
 		cell.updateViews({
 			"#cell": {
 				top: cell_y,
@@ -303,7 +303,7 @@ function openGenre(genre) {
  * show overlay controller
  */
 function showOverlay(controller, options) {
-	overlay_controller = Alloy.createController(controller, options);
+	overlay_controller = Alloy.createController('/' + controller, options);
 	var view = overlay_controller.getView();
 	if (OS_IOS) view.transform = Ti.UI.create2DMatrix({scale: 2.0});
 	$.window.add(view);
