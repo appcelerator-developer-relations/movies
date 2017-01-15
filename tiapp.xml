@@ -10,7 +10,10 @@
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>true</navbar-hidden>
+    
+    <!-- Set to 'true' to enable Ti.Analytics -->
     <analytics>false</analytics>
+    
     <guid>11111111-1111-1111-1111-111111111111</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
@@ -24,7 +27,7 @@
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <mobileweb/>
     <modules>
-        <module platform="iphone">ti.coremotion</module>
+        <module platform="iphone" version="2.0.1">ti.coremotion</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

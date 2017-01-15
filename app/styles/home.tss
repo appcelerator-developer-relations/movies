@@ -49,7 +49,7 @@
 }
 "#search_textfield[platform=ios]": {
 	top: 30,
-	appearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
+	keyboardAppearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
 	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS
 }
 

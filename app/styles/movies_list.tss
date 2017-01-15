@@ -24,7 +24,7 @@
 		left: 0,
 		right: 0
 	},
-	separatorStyle: Titanium.UI.iPhone.TableViewSeparatorStyle.NONE
+	separatorStyle: Titanium.UI.TABLE_VIEW_SEPARATOR_STYLE_NONE
 }
 
 "#tableview_header": {
