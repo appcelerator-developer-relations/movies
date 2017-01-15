@@ -13,6 +13,7 @@ var Data = require("/data"),
 	theMovieDb = require('/themoviedb');
 if (OS_IOS) {
 	var CoreMotion = require("ti.coremotion");
+	var DeviceMotion = CoreMotion.createDeviceMotion();
 }
 
 var args = arguments[0] || {};
@@ -521,9 +522,9 @@ if (OS_IOS) {
 			return;
 		}
 
-		if (CoreMotion.isDeviceMotionAvailable() && !CoreMotion.isDeviceMotionActive()) {
-			CoreMotion.setDeviceMotionUpdateInterval(50);
-			CoreMotion.startDeviceMotionUpdates(function(e) {
+		if (DeviceMotion.isDeviceMotionAvailable() && !DeviceMotion.isDeviceMotionActive()) {
+			DeviceMotion.setDeviceMotionUpdateInterval(50);
+			DeviceMotion.startDeviceMotionUpdates(function(e) {
 				if (e.success) {
 					// Ti.API.info("picth: " + e.attitude.pitch);
 					// Ti.API.info("roll: " + e.attitude.roll);
@@ -548,8 +549,8 @@ if (OS_IOS) {
 	}
 
 	function unregisterForMotionUpdates() {
-		if (CoreMotion.isDeviceMotionActive()) {
-			CoreMotion.stopDeviceMotionUpdates();
+		if (DeviceMotion.isDeviceMotionActive()) {
+			DeviceMotion.stopDeviceMotionUpdates();
 		}
 	}
 }

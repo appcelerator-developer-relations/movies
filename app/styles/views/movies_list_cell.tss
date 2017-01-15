@@ -7,7 +7,7 @@
 }
 
 "#container[platform=ios]": {
-	selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
+	separatorStyle: Titanium.UI.TABLE_VIEW_SEPARATOR_STYLE_NONE
 }
 
 "#scrollview": {
