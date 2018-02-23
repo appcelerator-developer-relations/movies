@@ -18,8 +18,8 @@ function loadJsonFile(name, callback) {
 	var file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/data/' + name + '.json');
 
 	if (file.exists()) {
-  		var dataSrc = Ti.Platform.osname === 'android' ? ''+file.read() : file.read();
-  		data = JSON.parse(dataSrc);
+		var dataSrc = file.read();
+  		var data = JSON.parse(dataSrc);
   		callback(null, data);
   		return; 
 	}
