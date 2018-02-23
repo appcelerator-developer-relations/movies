@@ -149,7 +149,7 @@ function orientationChange(_event) {
 	if(_event.orientation === Titanium.UI.FACE_UP || _event.orientation === Titanium.UI.FACE_DOWN || _event.orientation === Titanium.UI.UNKNOWN) {
 		return;
 	}
-	console.log(_event.source.landscape);
+
 	Alloy.Globals.Device.orientation = _event.source.landscape ? "landscape" : "portrait";
 
 	/**
