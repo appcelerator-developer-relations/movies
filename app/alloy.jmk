@@ -28,10 +28,11 @@ task("pre:compile", function(event, logger) {
 		|| !config["env:" + env].run_logic_tests) {
 			
 	    logger.info("*** Excluding tests from build");
-	    var path = (event.alloyConfig.platform == 'android') ? 'android' : 'iphone';
+		logger.info(event.alloyConfig.platform)
+	    var path = (event.alloyConfig.platform === 'ios') ? 'iphone' : event.alloyConfig.platform;
 	    var tests_dir = event.dir.resources + "/" + path + "/tests";
-    	var wrench = require("wrench");
-    	wrench.rmdirSyncRecursive(tests_dir);
+    	var fs = require("fs-extra");
+    	fs.removeSync(tests_dir);
     	
    } else {
    		logger.info("*** Including tests in build");

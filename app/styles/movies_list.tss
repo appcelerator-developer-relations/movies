@@ -20,7 +20,7 @@
 	opacity: 0
 }
 "#tableview[platform=ios]": {
-	separatorInsets: {
+	tableSeparatorInsets: {
 		left: 0,
 		right: 0
 	},
