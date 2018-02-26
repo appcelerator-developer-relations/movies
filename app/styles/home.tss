@@ -35,8 +35,10 @@
 	left: 10,
 	right: 10,
 	height: 40,
-	paddingLeft: 40,
-	paddingRight: 10,
+	padding: {
+		right: 10,
+		left: 40
+	},
 	color: '#ffffff',
 	autocapitalization: true,
 	autocorrect: false,
@@ -49,7 +51,7 @@
 }
 "#search_textfield[platform=ios]": {
 	top: 30,
-	keyboardAppearance: Ti.UI.KEYBOARD_APPEARANCE_ALERT,
+	keyboardAppearance: Ti.UI.KEYBOARD_APPEARANCE_DARK,
 	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS
 }
 

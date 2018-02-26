@@ -150,7 +150,7 @@ function orientationChange(_event) {
 		return;
 	}
 
-	Alloy.Globals.Device.orientation = _event.source.isLandscape() ? "landscape" : "portrait";
+	Alloy.Globals.Device.orientation = _event.source.landscape ? "landscape" : "portrait";
 
 	/**
 	 * Fires an event for orientation change handling throughout the app

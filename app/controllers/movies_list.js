@@ -132,7 +132,18 @@ function populateMovies(movies) {
 	$.tableview.animate(tableview_animation);
 }
 
-
+/**
+ * cell offset
+ * @param {Number} idx
+ * @param {Number} scroll_offset
+ */
+function cellImageOffset(idx, scroll_offset) {
+	scroll_offset = scroll_offset || 0;
+	var offset = ((scroll_offset - 64) * tableview_offset_per_px) - (idx * tableview_cell_offset);
+	offset = Math.min(offset, 0);
+	offset = Math.max(offset, Alloy.Globals.layout.list.row.height - Alloy.Globals.layout.list.row.imageHeight);
+	return offset;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -218,18 +229,5 @@ if (OS_IOS) {
 				}
 			});	
 		}
-	}
-	
-	/**
-	 * cell offset
- 	 * @param {Number} idx
- 	 * @param {Number} scroll_offset
-	 */
-	function cellImageOffset(idx, scroll_offset) {
-		scroll_offset = scroll_offset || 0;
-		var offset = ((scroll_offset - 64) * tableview_offset_per_px) - (idx * tableview_cell_offset);
-		offset = Math.min(offset, 0);
-		offset = Math.max(offset, Alloy.Globals.layout.list.row.height - Alloy.Globals.layout.list.row.imageHeight);
-		return offset;
 	}
 }
