@@ -1,8 +1,8 @@
 /**
  * Movies
- * 
+ *
  * @copyright
- * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2015-present by Appcelerator, Inc. All Rights Reserved.
  *
  * @license
  * Licensed under the terms of the Apache Public License
@@ -11,30 +11,30 @@
 
 /**
  * pre compile callback
- * 
+ *
  * - removes tests directory from production builds and when config.run_logic_tests is false
  */
-task("pre:compile", function(event, logger) {
-	
+task('pre:compile', function (event, logger) {
+
 	var env = event.alloyConfig.deploytype;
-	logger.info("Pre compile (" + env + ")");
-	
-	var fs = require("fs");
-	var config = JSON.parse(fs.readFileSync(event.dir.config + ".json", "utf8"));
-	
-	logger.info(JSON.stringify(config["env:" + env]));
-	
-	if ("production" === env
-		|| !config["env:" + env].run_logic_tests) {
-			
-	    logger.info("*** Excluding tests from build");
-		logger.info(event.alloyConfig.platform)
+	logger.info('Pre compile (' + env + ')');
+
+	var fs = require('fs');
+	var config = JSON.parse(fs.readFileSync(event.dir.config + '.json', 'utf8'));
+
+	logger.info(JSON.stringify(config['env:' + env]));
+
+	if (env === 'production'
+		|| !config['env:' + env].run_logic_tests) {
+
+	    logger.info('*** Excluding tests from build');
+		logger.info(event.alloyConfig.platform);
 	    var path = (event.alloyConfig.platform === 'ios') ? 'iphone' : event.alloyConfig.platform;
-	    var tests_dir = event.dir.resources + "/" + path + "/tests";
-    	var fs = require("fs-extra");
+	    var tests_dir = event.dir.resources + '/' + path + '/tests';
+    	var fs = require('fs-extra');
     	fs.removeSync(tests_dir);
-    	
-   } else {
-   		logger.info("*** Including tests in build");
-   }
+
+	} else {
+   		logger.info('*** Including tests in build');
+	}
 });
