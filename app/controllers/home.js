@@ -2,7 +2,7 @@
  * Movies
  *
  * @copyright
- * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2015-present by Appcelerator, Inc. All Rights Reserved.
  *
  * @license
  * Licensed under the terms of the Apache Public License
@@ -282,22 +282,20 @@ $.animateIn = function () {
  * open list
  */
 function openList(list) {
-	Alloy.Globals.Navigator.push('movies_list',
-		{
-			type: 'list',
-			id: list.id
-		});
+	Alloy.Globals.Navigator.push('movies_list', {
+		type: 'list',
+		id: list.id
+	});
 }
 
 /**
  * open genre
  */
 function openGenre(genre) {
-	Alloy.Globals.Navigator.push('movies_list',
-		{
-			type: 'genre',
-			id: genre.id
-		});
+	Alloy.Globals.Navigator.push('movies_list', {
+		type: 'genre',
+		id: genre.id
+	});
 }
 
 /**

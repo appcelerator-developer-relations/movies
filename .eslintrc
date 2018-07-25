@@ -1,6 +1,7 @@
 {
     "extends": [ "axway/env-alloy" ],
     "rules": {
-        "import/no-absolute-path": "off"
+        "import/no-absolute-path": "off",
+        "indent": ["error", 2]
     }
 }
