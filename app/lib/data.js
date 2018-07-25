@@ -1,6 +1,6 @@
 /**
  * Movies
- * 
+ *
  * @copyright
  * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
  *
@@ -11,8 +11,8 @@
 
 /**
  * Load JSON file
- * @param {String} name
- * @param {Function} callback
+ * @param {String} name The name of the JSON file
+ * @param {Function} callback The callback invoked once parse
  */
 function loadJsonFile(name, callback) {
 	var file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/data/' + name + '.json');
@@ -21,41 +21,41 @@ function loadJsonFile(name, callback) {
 		var dataSrc = file.read();
   		var data = JSON.parse(dataSrc);
   		callback(null, data);
-  		return; 
+  		return;
 	}
 
- 	callback("Error loading JSON file '" + name + "'");
+ 	callback('Error loading JSON file \'' + name + '\'');
 }
 
 /**
- * Data 
+ * Data
  */
 var Data = {
-	
-	get_config: function(callback) {
+
+	get_config: function (callback) {
 		loadJsonFile('config', callback);
 	},
-	
-	movies_get_lists: function(callback) {
+
+	movies_get_lists: function (callback) {
 	   loadJsonFile('lists', callback);
 	},
-	
-	movies_get_list: function(callback) {
+
+	movies_get_list: function (callback) {
 	   loadJsonFile('list', callback);
 	},
-	
-	movies_get_genres: function(callback) {
+
+	movies_get_genres: function (callback) {
 	   loadJsonFile('genres', callback);
 	},
-	
-	movies_get_genre: function(callback) {
+
+	movies_get_genre: function (callback) {
 	   loadJsonFile('genre', callback);
 	},
-	
-	movies_search: function(query, callback) {
-	   loadJsonFile('list', function(error, e){
+
+	movies_search: function (query, callback) {
+	   loadJsonFile('list', function (error, e) {
 	   		if (!error) {
-	   			var results = _.filter(e.movies, function(movie){
+	   			var results = _.filter(e.movies, function (movie) {
 	   				return (new RegExp(query, 'i')).test(movie.title);
 	   			});
 	   			callback(null, results);
@@ -64,8 +64,8 @@ var Data = {
 	   		}
 	   });
 	},
-	
-	movies_get_movie: function(callback) {
+
+	movies_get_movie: function (callback) {
 	   loadJsonFile('movie', callback);
 	}
 };

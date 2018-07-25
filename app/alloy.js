@@ -1,6 +1,6 @@
 /**
  * Movies
- * 
+ *
  * @copyright
  * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
  *
@@ -9,11 +9,11 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 //
 // Constants
 //
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 
 // properties
 Alloy.Globals.PROPERTY_ENABLE_MOTION_ANIMATION = 'PROPERTY_ENABLE_MOTION_ANIMATION';
@@ -25,19 +25,17 @@ if (!Ti.App.Properties.hasProperty(Alloy.Globals.PROPERTY_ENABLE_MOTION_ANIMATIO
 }
 if (!Ti.App.Properties.hasProperty(Alloy.Globals.PROPERTY_ENABLE_LIST_ANIMATION)) {
 	Ti.App.Properties.setBool(Alloy.Globals.PROPERTY_ENABLE_LIST_ANIMATION, true);
-};
+}
 
 // events
 Alloy.Globals.EVENT_PROPERTY_ENABLE_MOTION_ANIMATION_DID_CHANGE = 'EVENT_PROPERTY_ENABLE_MOTION_ANIMATION_DID_CHANGE';
 Alloy.Globals.EVENT_PROPERTY_ENABLE_LIST_ANIMATION_DID_CHANGE = 'EVENT_PROPERTY_ENABLE_LIST_ANIMATION_DID_CHANGE';
 
-
-
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 //
 // Navigation singleton
 //
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 
 /**
  * The navigator object which handles all navigation
@@ -49,20 +47,18 @@ Alloy.Globals.Navigator = {};
  * Init navigation
  * Called from index controller once intro animation is complete
  */
-Alloy.Globals.initNavigation = function() {		
+Alloy.Globals.initNavigation = function () {
 	// Require in the navigation module
-    Alloy.Globals.Navigator = require("/navigation")({
-        parent: Alloy.Globals.navigationWindow || null
-    });
+	Alloy.Globals.Navigator = require('/navigation')({
+		parent: Alloy.Globals.navigationWindow || null
+	});
 };
 
-
-
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 //
 // Device singleton
 //
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 
 /**
  * Device information, some come from the Ti API calls and can be referenced
@@ -81,33 +77,32 @@ Alloy.Globals.initNavigation = function() {
  */
 Alloy.Globals.Device = {
 	version: Ti.Platform.version,
-	versionMajor: parseInt(Ti.Platform.version.split(".")[0], 10),
-	versionMinor: parseInt(Ti.Platform.version.split(".")[1], 10),
+	versionMajor: parseInt(Ti.Platform.version.split('.')[0], 10),
+	versionMinor: parseInt(Ti.Platform.version.split('.')[1], 10),
 	width: (Ti.Platform.displayCaps.platformWidth > Ti.Platform.displayCaps.platformHeight) ? Ti.Platform.displayCaps.platformHeight : Ti.Platform.displayCaps.platformWidth,
 	height: (Ti.Platform.displayCaps.platformWidth > Ti.Platform.displayCaps.platformHeight) ? Ti.Platform.displayCaps.platformWidth : Ti.Platform.displayCaps.platformHeight,
 	dpi: Ti.Platform.displayCaps.dpi,
-	orientation: Ti.Gesture.orientation == Ti.UI.LANDSCAPE_LEFT || Ti.Gesture.orientation == Ti.UI.LANDSCAPE_RIGHT ? "landscape" : "portrait"
+	orientation: Ti.Gesture.orientation == Ti.UI.LANDSCAPE_LEFT || Ti.Gesture.orientation == Ti.UI.LANDSCAPE_RIGHT ? 'landscape' : 'portrait'
 };
 
-if(OS_ANDROID) {
+if (OS_ANDROID) {
 	Alloy.Globals.Device.width = (Alloy.Globals.Device.width / (Alloy.Globals.Device.dpi / 160));
 	Alloy.Globals.Device.height = (Alloy.Globals.Device.height / (Alloy.Globals.Device.dpi / 160));
 }
 
-Alloy.Globals.dpToPx = function(dp) {
+Alloy.Globals.dpToPx = function (dp) {
 	return dp * (Ti.Platform.displayCaps.platformHeight / Alloy.Globals.Device.height);
 };
 
-Alloy.Globals.pxToDp = function(px) {
+Alloy.Globals.pxToDp = function (px) {
 	return px * (Alloy.Globals.Device.height / Ti.Platform.displayCaps.platformHeight);
 };
 
-
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 //
 // Orientation helpers
 //
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 
 /**
  * Helper to bind the orientation events to a controller.
@@ -122,19 +117,19 @@ Alloy.Globals.pxToDp = function(px) {
  *
  * @param {Controllers} _controller The controller to bind the orientation events
  */
-Alloy.Globals.bindOrientationEvents = function(_controller) {
-	_controller.window.addEventListener("close", function() {
-		if(_controller.handleOrientation) {
-			Ti.App.removeEventListener("orientationChange", _controller.handleOrientation);
+Alloy.Globals.bindOrientationEvents = function (_controller) {
+	_controller.window.addEventListener('close', function () {
+		if (_controller.handleOrientation) {
+			Ti.App.removeEventListener('orientationChange', _controller.handleOrientation);
 		}
 	});
-	
-	_controller.window.addEventListener("open", function() {
-		Ti.App.addEventListener("orientationChange", function(_event) {
-			if(_controller.handleOrientation) {
+
+	_controller.window.addEventListener('open', function () {
+		Ti.App.addEventListener('orientationChange', function (_event) {
+			if (_controller.handleOrientation) {
 				_controller.handleOrientation(_event);
 			}
-			
+
 			setViewsForOrientation(_controller);
 		});
 	});
@@ -146,21 +141,21 @@ Alloy.Globals.bindOrientationEvents = function(_controller) {
  */
 function orientationChange(_event) {
 	// Ignore face-up, face-down and unknown orientation
-	if(_event.orientation === Titanium.UI.FACE_UP || _event.orientation === Titanium.UI.FACE_DOWN || _event.orientation === Titanium.UI.UNKNOWN) {
+	if (_event.orientation === Titanium.UI.FACE_UP || _event.orientation === Titanium.UI.FACE_DOWN || _event.orientation === Titanium.UI.UNKNOWN) {
 		return;
 	}
 
-	Alloy.Globals.Device.orientation = _event.source.landscape ? "landscape" : "portrait";
+	Alloy.Globals.Device.orientation = _event.source.landscape ? 'landscape' : 'portrait';
 
 	/**
 	 * Fires an event for orientation change handling throughout the app
 	 * @event orientationChange
 	 */
-	Ti.App.fireEvent("orientationChange", {
+	Ti.App.fireEvent('orientationChange', {
 		orientation: Alloy.Globals.Device.orientation
 	});
 }
-Ti.Gesture.addEventListener("orientationchange", orientationChange);
+Ti.Gesture.addEventListener('orientationchange', orientationChange);
 
 /**
  * Update views for current orientation helper
@@ -181,55 +176,53 @@ Ti.Gesture.addEventListener("orientationchange", orientationChange);
  * @param {Controllers} _controller
  */
 function setViewsForOrientation(_controller) {
-	if(!Alloy.Globals.Device.orientation) {
+	if (!Alloy.Globals.Device.orientation) {
 		return;
 	}
-	
+
 	// Restricted the UI for portrait and landscape orientation
-	if(Alloy.Globals.Device.orientation == "portrait" || Alloy.Globals.Device.orientation == "landscape") {
-		for(var view in _controller.__views) {
-			if(_controller.__views[view][Alloy.Globals.Device.orientation] && typeof _controller.__views[view].applyProperties == "function") {
+	if (Alloy.Globals.Device.orientation == 'portrait' || Alloy.Globals.Device.orientation == 'landscape') {
+		for (var view in _controller.__views) {
+			if (_controller.__views[view][Alloy.Globals.Device.orientation] && typeof _controller.__views[view].applyProperties === 'function') {
 				_controller.__views[view].applyProperties(_controller.__views[view][Alloy.Globals.Device.orientation]);
-			} else if(_controller.__views[view].wrapper && _controller.__views[view].wrapper[Alloy.Globals.Device.orientation] && typeof _controller.__views[view].applyProperties == "function") {
+			} else if (_controller.__views[view].wrapper && _controller.__views[view].wrapper[Alloy.Globals.Device.orientation] && typeof _controller.__views[view].applyProperties === 'function') {
 				_controller.__views[view].applyProperties(_controller.__views[view].wrapper[Alloy.Globals.Device.orientation]);
 			}
 		}
 	}
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 //
 // Layout
 //
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 
 /**
  * Calculate element dimensions for given screen size
  * @param {Object} size		containing width and height properties
  */
-Alloy.Globals.calculateElementDimensions = function(size) {
-		
+Alloy.Globals.calculateElementDimensions = function (size) {
+
 	var layout = {};
-	
+
 	// intro
 	layout.intro = {};
-	layout.intro.clapperTopContainerTop = size.height/2 - 43;
-	layout.intro.clapperTopContainerLeft = size.width/2 - 150;
+	layout.intro.clapperTopContainerTop = size.height / 2 - 43;
+	layout.intro.clapperTopContainerLeft = size.width / 2 - 150;
 	layout.intro.clapperBottomTop = layout.intro.clapperTopContainerTop + 31;
-	layout.intro.clapperBottomLeft = size.width/2 - 50;
+	layout.intro.clapperBottomLeft = size.width / 2 - 50;
 	layout.intro.activityViewTop = layout.intro.clapperTopContainerTop + 130;
-	
+
 	// options buttons
 	layout.optionButtons = {};
 	layout.optionButtons.width = size.width / 3;
-	layout.optionButtons.height = layout.optionButtons.width * 0.3; 
-	
+	layout.optionButtons.height = layout.optionButtons.width * 0.3;
+
 	// form
 	layout.overlay = {};
 	layout.overlay.width = (size.width > 400) ? 360 : (size.width - 40);
-	
+
 	// lists
 	layout.lists = {};
 	layout.lists.userCell = {};
@@ -237,7 +230,7 @@ Alloy.Globals.calculateElementDimensions = function(size) {
 	layout.lists.userCell.imageLeft = -layout.lists.userCell.width / 6;
 	layout.lists.userCell.imageWidth = Math.abs(layout.lists.userCell.imageLeft * 2) + layout.lists.userCell.width;
 	layout.lists.userCell.imageHeight = Math.ceil(layout.lists.userCell.imageWidth * 9) / 16;
-	
+
 	layout.lists.cell = {};
 	layout.lists.cell.width = (size.width - 30) / 2;
 	layout.lists.cell.height = layout.lists.cell.width;
@@ -245,45 +238,45 @@ Alloy.Globals.calculateElementDimensions = function(size) {
 	layout.lists.cell.imageLeft = -layout.lists.cell.width;
 	layout.lists.cell.imageWidth = Math.abs(layout.lists.cell.imageLeft * 2) + layout.lists.cell.width;
 	layout.lists.cell.imageHeight = Math.ceil(layout.lists.cell.imageWidth * 9) / 16;
-	
+
 	// movies list
 	layout.list = {};
 	layout.list.row = {};
 	layout.list.row.width = size.width;
 	layout.list.row.height = Math.ceil(size.width / 2.5);
 	layout.list.row.imageHeight = Math.ceil((size.width * 9) / 16);
-	
+
 	// movie
 	layout.movie = {};
 	layout.movie.backdropImageLeft = -size.width * 0.15;
 	layout.movie.backdropImageWidth = size.width * 1.3;
 	layout.movie.backdropImageHeight = Math.ceil((layout.movie.backdropImageWidth * 9) / 16);
 	layout.movie.titleTop = layout.movie.backdropImageHeight * 0.5;
-	layout.movie.detailsTop = 15; 
+	layout.movie.detailsTop = 15;
 	layout.movie.posterWidth = Math.ceil(size.width / 3);
-	layout.movie.posterHeight = layout.movie.posterWidth * 1.5; 
-	layout.movie.infoLeft = layout.movie.posterWidth + 15; 
+	layout.movie.posterHeight = layout.movie.posterWidth * 1.5;
+	layout.movie.infoLeft = layout.movie.posterWidth + 15;
 	layout.movie.infoWidth = size.width - layout.movie.infoLeft - 20;
 	layout.movie.linkButtonTop = 40;
 	layout.movie.linkButtonWidth = (layout.movie.infoWidth - 10) / 2;
-	if (OS_ANDROID) layout.movie.linkButtonWidth -= 1;  
-	layout.movie.imdbButtonLeft = layout.movie.infoLeft + layout.movie.linkButtonWidth + 10; 
+	if (OS_ANDROID) { layout.movie.linkButtonWidth -= 1; }
+	layout.movie.imdbButtonLeft = layout.movie.infoLeft + layout.movie.linkButtonWidth + 10;
 	layout.movie.synopsisTop = 20;
-	
+
 	return layout;
 };
 
 // Calculate element dimentsions
 Alloy.Globals.layout = Alloy.Globals.calculateElementDimensions(Alloy.Globals.Device);
-	
+
 /**
  * Backdrop image size
  * Calculate best size image based on config
  */
 Alloy.Globals.backdropImageSize = 'original';
-Alloy.Globals.setBackdropImageSize = function(sizes) {
+Alloy.Globals.setBackdropImageSize = function (sizes) {
 	Alloy.Globals.backdropImageSize = getBestImageSize(sizes, Alloy.Globals.Device.width);
-	Ti.API.info("Backdrop size for " + Alloy.Globals.Device.width + ": " + Alloy.Globals.backdropImageSize);
+	Ti.API.info('Backdrop size for ' + Alloy.Globals.Device.width + ': ' + Alloy.Globals.backdropImageSize);
 };
 
 /**
@@ -291,9 +284,9 @@ Alloy.Globals.setBackdropImageSize = function(sizes) {
  * Calculate best size image based on config
  */
 Alloy.Globals.posterImageSize = 'original';
-Alloy.Globals.setPosterImageSize = function(sizes) {
+Alloy.Globals.setPosterImageSize = function (sizes) {
 	Alloy.Globals.posterImageSize = getBestImageSize(sizes, Alloy.Globals.layout.movie.posterWidth);
-	Ti.API.info("Poster size for " + Alloy.Globals.layout.movie.posterWidth  + ": " + Alloy.Globals.posterImageSize);
+	Ti.API.info('Poster size for ' + Alloy.Globals.layout.movie.posterWidth  + ': ' + Alloy.Globals.posterImageSize);
 };
 
 /**
@@ -304,7 +297,7 @@ Alloy.Globals.setPosterImageSize = function(sizes) {
 function getBestImageSize(sizes, target) {
 	var bestSizeValue = 999999;
 	var bestSize = 'original';
-	for (var i=0; i<sizes.length; i++) {
+	for (var i = 0; i < sizes.length; i++) {
 		var size = sizes[i];
 		if (size != 'original') {
 			var sizeValue = parseInt(size.substr(1, size.length));
@@ -317,13 +310,11 @@ function getBestImageSize(sizes, target) {
 	return bestSize;
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 //
 // Unit tests
 //
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 
 /**
  * Unit test runner

@@ -1,6 +1,6 @@
 /**
  * Movies
- * 
+ *
  * @copyright
  * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
  *
@@ -17,21 +17,20 @@ function init() {
 }
 init();
 
-
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 //
 // event handlers
 //
-///////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////
 
-$.motion_switch.addEventListener('change', function(e) {
+$.motion_switch.addEventListener('change', function (e) {
 	Ti.Analytics.featureEvent('edit:motion.' + e.value);
 	Ti.App.Properties.setBool(Alloy.Globals.PROPERTY_ENABLE_MOTION_ANIMATION, e.value);
-	Ti.App.fireEvent(Alloy.Globals.EVENT_PROPERTY_ENABLE_MOTION_ANIMATION_DID_CHANGE, {value: e.value});
+	Ti.App.fireEvent(Alloy.Globals.EVENT_PROPERTY_ENABLE_MOTION_ANIMATION_DID_CHANGE, { value: e.value });
 });
 
-$.list_animation_switch.addEventListener('change', function(e) {
+$.list_animation_switch.addEventListener('change', function (e) {
 	Ti.Analytics.featureEvent('edit:parallax.' + e.value);
 	Ti.App.Properties.setBool(Alloy.Globals.PROPERTY_ENABLE_LIST_ANIMATION, e.value);
-	Ti.App.fireEvent(Alloy.Globals.EVENT_PROPERTY_ENABLE_LIST_ANIMATION_DID_CHANGE, {value: e.value});
+	Ti.App.fireEvent(Alloy.Globals.EVENT_PROPERTY_ENABLE_LIST_ANIMATION_DID_CHANGE, { value: e.value });
 });

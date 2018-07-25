@@ -6,13 +6,13 @@ var _currentImageIndex = 0;
 var _currentImageView = 'imageview';
 var _animationInterval;
 
-$.populateImages = function(images) {
+$.populateImages = function (images) {
 	_images = images;
 	$.imageview.image = _images[0];
 	Ti.API.debug('Images: ' + images);
 };
 
-$.animateImages = function() {
+$.animateImages = function () {
 
 	var nextImageIndex = (_currentImageIndex >= _images.length - 1) ? 0 : _currentImageIndex + 1;
 	var nextImageView = (_currentImageView == 'imageview') ? 'imageview1' : 'imageview';
@@ -39,19 +39,19 @@ $.animateImages = function() {
 	_currentImageView = nextImageView;
 };
 
-$.animateClick = function(callback) {
+$.animateClick = function (callback) {
 	animation.flash($.overlay_view, callback);
 };
 
 if (OS_ANDROID) {
-	$.imageview.addEventListener('load', function(e){
+	$.imageview.addEventListener('load', function (e) {
 		$.imageview.animate({
 			opacity: 1,
 			duration: 1000
 		});
 	});
-	
-	$.imageview1.addEventListener('load', function(e){
+
+	$.imageview1.addEventListener('load', function (e) {
 		$.imageview1.animate({
 			opacity: 1,
 			duration: 1000
@@ -59,7 +59,7 @@ if (OS_ANDROID) {
 	});
 }
 
-$.title_label.addEventListener('postlayout', function(e){
+$.title_label.addEventListener('postlayout', function (e) {
 	if ($.title_label.text.indexOf(' ') == -1) {
 		if (OS_IOS) {
 			$.title_label.minimumFontSize = $.title_label.font.size;

@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.appcelerator.movies</id>
     <name>Movies</name>
-    <version>1.0.2</version>
+    <version>1.1.0</version>
     <publisher>Appcelerator</publisher>
     <url>http://www.appcelerator.com</url>
     <description>Movies Sample App</description>
@@ -10,7 +10,7 @@
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>true</navbar-hidden>
-
+    <transpile>true</transpile>
     <!-- Set to 'true' to enable Ti.Analytics -->
     <analytics>false</analytics>
 
@@ -36,7 +36,7 @@
         <target device="mobileweb">false</target>
         <target device="windows">true</target>
     </deployment-targets>
-    <sdk-version>7.1.0.v20180222163802</sdk-version>
+    <sdk-version>7.2.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>

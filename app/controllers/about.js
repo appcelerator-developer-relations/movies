@@ -1,6 +1,6 @@
 /**
  * Movies
- * 
+ *
  * @copyright
  * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
  *
