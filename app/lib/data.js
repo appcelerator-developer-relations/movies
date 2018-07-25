@@ -14,16 +14,12 @@
  * @param {Function} callback The callback invoked once parse
  */
 function loadJsonFile(name, callback) {
-  var file = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/data/' + name + '.json');
-
-  if (file.exists()) {
-    var dataSrc = file.read();
-    var data = JSON.parse(dataSrc);
+  try {
+    const data = require('data/' + name);
     callback(null, data);
-    return;
+  } catch (e) {
+    callback('Error loading JSON file \'' + name + '\'');
   }
-
-  callback('Error loading JSON file \'' + name + '\'');
 }
 
 /**

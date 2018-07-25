@@ -117,10 +117,7 @@ function playVideo(url) {
   videoPlayer = Ti.Media.createVideoPlayer({
     backgroundColor: '#000',
     url: url,
-    fullscreen: true,
-    autoplay: true,
-    scalingMode: Ti.Media.VIDEO_SCALING_ASPECT_FIT,
-    mediaControlMode: Ti.Media.VIDEO_CONTROL_DEFAULT
+    autoplay: true
   });
   videoPlayer.addEventListener('complete', function () {
     Ti.API.info('video player complete');
@@ -146,9 +143,6 @@ exports.close = function () {
   Ti.API.info('closing video player');
 
   if (OS_IOS) {
-    if (videoPlayer) {
-      videoPlayer.fullscreen = false;
-    }
     win && win.close();
     win = null;
   } else if (OS_WINDOWS) {
