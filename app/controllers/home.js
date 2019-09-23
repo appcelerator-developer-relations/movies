@@ -306,11 +306,11 @@ function openGenre(genre) {
 function showOverlay(controller, options) {
 	overlay_controller = Alloy.createController('/' + controller, options);
 	var view = overlay_controller.getView();
-	if (OS_IOS) view.transform = Ti.UI.create2DMatrix({scale: 2.0});
+	if (OS_IOS) view.transform = Ti.UI.createMatrix2D({scale: 2.0});
 	$.window.add(view);
 
 	var cells_animation = Ti.UI.createAnimation({
-		transform: Ti.UI.create2DMatrix({scale: 0.7}),
+		transform: Ti.UI.createMatrix2D({scale: 0.7}),
 		opacity: 0.5,
 		curve: Ti.UI.ANIMATION_CURVE_EASE_OUT,
 		duration: 500
@@ -318,7 +318,7 @@ function showOverlay(controller, options) {
 	$.lists_container.animate(cells_animation);
 
 	var view_animation = Ti.UI.createAnimation({
-		transform: Ti.UI.create2DMatrix({scale: 1}),
+		transform: Ti.UI.createMatrix2D({scale: 1}),
 		opacity: 1,
 		curve: Ti.UI.ANIMATION_CURVE_EASE_OUT,
 		duration: 500,
@@ -347,7 +347,7 @@ function hideOverlay() {
 	var view = overlay_controller.getView();
 	view.removeEventListener("click", hideOverlay);
 	var view_animation = Ti.UI.createAnimation({
-		transform: Ti.UI.create2DMatrix({scale: 2.0}),
+		transform: Ti.UI.createMatrix2D({scale: 2.0}),
 		opacity: 0,
 		curve: Ti.UI.ANIMATION_CURVE_EASE_OUT,
 		duration: 500
@@ -360,7 +360,7 @@ function hideOverlay() {
 	});
 
 	var animation = Ti.UI.createAnimation({
-		transform: Ti.UI.create2DMatrix({scale: 1.0}),
+		transform: Ti.UI.createMatrix2D({scale: 1.0}),
 		opacity: 1,
 		curve: Ti.UI.ANIMATION_CURVE_EASE_OUT,
 		duration: 500,

@@ -56,13 +56,8 @@ function Navigation(_args) {
         that.currentController = controller;
         that.currentControllerArguments = _controllerArguments;
 		that.controllers.push(controller);
-		 
-        if(OS_IOS) {
-            that.parent.openWindow(controller.window);
-        } else {
-            controller.window.open();
-        }
-
+		that.parent.openWindow(controller.window);
+     
         return controller;
     },
     
@@ -70,14 +65,9 @@ function Navigation(_args) {
     	
     	var controller = that.controllers.pop();
     	var window = controller.window;
-    	
-    	if(OS_IOS) {
-            that.parent.closeWindow(window);
-       } else {
-       		window.close();
-       }
-       
-       controller.destroy();
+    	that.parent.closeWindow(window);
+    
+        controller.destroy();
     },
     
     this.openModal = function(_controller, _controllerArguments) {
@@ -85,33 +75,21 @@ function Navigation(_args) {
         that.currentController = controller;
         that.currentControllerArguments = _controllerArguments;
 
-        if(OS_IOS) {
-            controller.window.open({
-                modal : true,
-                animated: false
-            });
-        } else {
-            controller.window.addEventListener('open', function(e) {
-                that.setActionBarStyle(controller.window);
-            });
-            controller.window.open();
-        }
-
+        controller.window.open({
+            modal : true,
+            animated: false
+        });
         return controller;
     },
     
     this.closeModal = function(_controller) {
-        
-        if(OS_IOS) {
-            _controller.window.close();
-            _controller.window = null;
-        } else {
-            _controller.window.close();
-            _controller.window = null;
-        }
-
-        _controller.destroy();
-        _controller = null;
+    
+        _controller.window.close();
+        _controller.window = null;
+    
+    	_controller.destroy();
+    	_controller = null;
+    
     };
 
 }
