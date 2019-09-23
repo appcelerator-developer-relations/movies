@@ -48,17 +48,12 @@ function init() {
  */
 function displayHome() {
 	
-	if (OS_IOS) {
-		var navWindow = Ti.UI.iOS.createNavigationWindow({
-			window: _homeController.window
-		});
-	    Alloy.Globals.navigationWindow = navWindow;
-	    Alloy.Globals.initNavigation();
-	    Alloy.Globals.navigationWindow.open();
-	} else {
-		Alloy.Globals.initNavigation();
-		Alloy.Globals.Navigator.push(_homeController);
-	}
+	var navWindow = Ti.UI.createNavigationWindow({
+		window: _homeController.window
+	});
+    Alloy.Globals.navigationWindow = navWindow;
+    Alloy.Globals.initNavigation();
+    Alloy.Globals.navigationWindow.open();
 	
 	_homeController.animateIn();
 	
